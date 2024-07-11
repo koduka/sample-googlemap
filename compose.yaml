@@ -1,0 +1,13 @@
+services:
+  node:
+    build: ./docker/node
+    tty: true
+    ports:
+      - 3000:3000
+    volumes:
+      - ./:/node
+    networks:
+      - defaults
+
+networks:
+  defaults:
